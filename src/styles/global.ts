@@ -21,7 +21,7 @@ export default createGlobalStyle`
   html {
     background: var(--background);
   }
-  :root {   
+  :root {
     --primary: #403D39;
     --background: #ff495c;
     --white: #ffffff;
