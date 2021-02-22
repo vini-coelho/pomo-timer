@@ -1,19 +1,20 @@
 <h1 align="center">
     <!-- <img alt="React Native Twitch.tv" width="300px" src="https://res.cloudinary.com/dhcpizhbr/image/upload/v1606341394/readme-assets/TwitchExtrudedWordmarkPurple_y3mimi.svg" /> -->
     <br>
-    Pomo Timer :tomato:
+    :tomato: Pomo Timer
 </h1>
 
 <h4 align="center">
   :tomato: Pomodoro Technique Timer built with ReactJS and Styled Components
 </h4>
+
 ## :tv: Live Demo
 
 Test the application live on Github Pages [here](https://vini-coelho.github.io/pomo-timer).
 ## :camera: Screenshots
 
 <div align="center">
-    <img src="https://github.com/vini-coelho/assets-store/blob/master/tomato-timer-sreenshot1.png"  alt="Main page"/>
+    <img src="https://github.com/vini-coelho/assets-store/blob/master/tomato-timer-sreenshot1.png" alt="Main page"/>
 </div>
 
 ## :rocket: Technologies
