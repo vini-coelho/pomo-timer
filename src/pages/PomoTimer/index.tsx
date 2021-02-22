@@ -1,11 +1,20 @@
-import React, { useEffect, useState, useMemo, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+
+import { FaGithub } from 'react-icons/fa';
 
 import ProgressBar from '../../components/ProgressBar';
 
 import PomodoroModes from '../../utils/PomodoroModes';
 import formatTimeDisplay from '../../utils/formatTimeDisplay';
 
-import { Container, Title, Button, ButtonArea, SelectButton } from './styles';
+import {
+  Container,
+  Title,
+  Button,
+  ButtonArea,
+  SelectButton,
+  Footer
+} from './styles';
 
 const PomoTimer: React.FC = () => {
   // const [progress, setProgress] = useState(100);
@@ -100,6 +109,16 @@ const PomoTimer: React.FC = () => {
           PAUSE
         </Button>
       </ButtonArea>
+      <Footer>
+        <FaGithub />
+        <a
+          href='http://github.com/vini-coelho'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Made with ♥ by Vinicius Coelho.
+        </a>
+      </Footer>
     </Container>
   );
 };

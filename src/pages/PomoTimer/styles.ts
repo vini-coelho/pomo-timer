@@ -70,3 +70,25 @@ export const SelectButton = styled.button<SelectButtonProps>`
   cursor: pointer;
   transition: background 200ms ease-in-out;
 `;
+
+export const Footer = styled.footer`
+  /* padding: 0 20px; */
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
+  a {
+    font-family: 'Montserrat';
+    font-size: 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  svg {
+    fill: var(--white);
+    height: 20px;
+    width: 20px;
+  }
+`;
