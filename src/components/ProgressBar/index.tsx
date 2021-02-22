@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Svg, BackgroundCircle, Circle } from './styles';
+import { Svg, BackgroundCircle, Circle, Time, Label } from './styles';
 
 interface Props {
   size: number;
@@ -8,6 +8,7 @@ interface Props {
   strokeWidth: number;
   circleOneStroke: string;
   circleTwoStroke: string;
+  time: string;
   label: string;
 }
 
@@ -17,6 +18,7 @@ const ProgressBar: React.FC<Props> = ({
   strokeWidth,
   circleOneStroke,
   circleTwoStroke,
+  time,
   label
 }) => {
   const [offset, setOffset] = useState(0);
@@ -48,9 +50,12 @@ const ProgressBar: React.FC<Props> = ({
         strokeDashoffset={offset}
         strokeWidth={strokeWidth}
       />
-      <text x={center} y={center}>
+      <Time x={center} y={center}>
+        {time}
+      </Time>
+      <Label x={center} y={center + 30}>
         {label}
-      </text>
+      </Label>
     </Svg>
   );
 };
