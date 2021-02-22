@@ -1,5 +1,6 @@
 {
   "name": "pomo-timer",
+  "homepage": "https://vini-coelho.github.io/pomo-timer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
