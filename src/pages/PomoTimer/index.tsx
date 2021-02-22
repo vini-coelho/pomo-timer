@@ -3,6 +3,7 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import ProgressBar from '../../components/ProgressBar';
 
 import PomodoroModes from '../../utils/PomodoroModes';
+import formatTimeDisplay from '../../utils/formatTimeDisplay';
 
 import { Container, Title, Button, ButtonArea, SelectButton } from './styles';
 
@@ -10,6 +11,7 @@ const PomoTimer: React.FC = () => {
   // const [progress, setProgress] = useState(100);
   const [totalTime, setTotalTime] = useState(PomodoroModes[0].time);
   const [currentTime, setCurrentTime] = useState(totalTime);
+  const [loop, setLoop] = useState(false);
   const [running, setRunning] = useState(false);
   const [paused, setPaused] = useState(false);
   // 0: pomodoro; 1: short break; 2: long break;
@@ -18,13 +20,6 @@ const PomoTimer: React.FC = () => {
   const interv = useRef({} as NodeJS.Timeout);
 
   const progress = (Math.floor(currentTime) / totalTime) * 100;
-
-  function formatTimer(seconds: number) {
-    const min = Math.floor(seconds / 60);
-    const sec = Math.floor(seconds % 60);
-
-    return `${min < 9 ? `0${min}` : min}:${sec < 9 ? `0${sec}` : sec}`;
-  }
 
   function resetTimer() {
     setPaused(false);
@@ -88,7 +83,7 @@ const PomoTimer: React.FC = () => {
       <ProgressBar
         progress={progress}
         label={PomodoroModes[mode].label}
-        time={formatTimer(currentTime)}
+        time={formatTimeDisplay(currentTime)}
         size={280}
         strokeWidth={6}
         circleOneStroke='rgba(255,255,255,0.3)'
