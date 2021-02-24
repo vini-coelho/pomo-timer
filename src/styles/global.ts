@@ -7,6 +7,15 @@ export default createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
   }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
   html, body, #root {
     max-height: 100vh;
     max-width: 100vw;

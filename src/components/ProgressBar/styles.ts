@@ -24,12 +24,12 @@ export const Circle = styled.circle`
 export const Time = styled.text`
   fill: var(--white);
   text-anchor: middle;
-  font-size: 3rem;
+  font-size: 4.8rem;
 `;
 
 export const Label = styled.text`
   fill: var(--white);
   text-anchor: middle;
   margin-top: 100px;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 `;

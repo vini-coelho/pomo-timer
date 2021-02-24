@@ -16,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.span`
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   color: var(--white);
 `;
 
@@ -32,7 +32,7 @@ export const Button = styled.button<ButtonProps>`
   transition: opacity 300ms;
 
   background: none;
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   color: var(--white);
 
   margin: 0 10px;
@@ -55,13 +55,13 @@ interface SelectButtonProps {
 export const SelectButton = styled.button<SelectButtonProps>`
   outline: none;
   background: rgba(255, 255, 255, ${p => (p.active ? 0.8 : 0.5)});
-  height: 2.5rem;
-  width: 8.75rem;
-  border-radius: 0.25rem;
+  height: 4rem;
+  width: 14rem;
+  border-radius: 0.4rem;
   margin: 0 5px;
 
   color: var(--primary);
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -80,7 +80,7 @@ export const Footer = styled.footer`
   /* left: 0; */
   a {
     font-family: 'Montserrat';
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     color: var(--white);
     text-decoration: none;
     margin-left: 10px;
