@@ -12,6 +12,7 @@ import {
   Title,
   Button,
   ButtonArea,
+  SelectButtonArea,
   SelectButton,
   Footer
 } from './styles';
@@ -78,7 +79,7 @@ const PomoTimer: React.FC = () => {
       <Title>
         pomo<strong>timer</strong>
       </Title>
-      <ButtonArea>
+      <SelectButtonArea>
         {PomodoroModes.map((item, key) => (
           <SelectButton
             key={key}
@@ -88,7 +89,7 @@ const PomoTimer: React.FC = () => {
             {item.title}
           </SelectButton>
         ))}
-      </ButtonArea>
+      </SelectButtonArea>
       <ProgressBar
         progress={progress}
         label={PomodoroModes[mode].label}

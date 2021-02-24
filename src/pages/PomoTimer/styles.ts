@@ -20,6 +20,20 @@ export const Title = styled.span`
   color: var(--white);
 `;
 
+export const SelectButtonArea = styled.div`
+  display: grid;
+
+  max-width: 59rem;
+
+  grid-template-columns: repeat(4, minmax(14rem, 1fr));
+  align-items: center;
+  grid-gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(14rem, 1fr));
+  }
+`;
+
 export const ButtonArea = styled.div`
   display: flex;
 `;
@@ -58,7 +72,6 @@ export const SelectButton = styled.button<SelectButtonProps>`
   height: 4rem;
   width: 14rem;
   border-radius: 0.4rem;
-  margin: 0 5px;
 
   color: var(--primary);
   font-size: 1.4rem;
