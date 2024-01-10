@@ -23,7 +23,7 @@ const PomoTimer: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(totalTime);
   const [loop, setLoop] = useState(false);
   const [running, setRunning] = useState(false);
-  const [paused, setPaused] = useState(false);
+  const [paused, setIsPaused] = useState(false);
   // 0: pomodoro; 1: short break; 2: long break;
   const [mode, setMode] = useState(0);
 
@@ -32,7 +32,7 @@ const PomoTimer: React.FC = () => {
   const progress = (Math.floor(currentTime) / totalTime) * 100;
 
   function resetTimer() {
-    setPaused(false);
+    setIsPaused(false);
     setRunning(false);
     setCurrentTime(totalTime);
 
@@ -41,7 +41,7 @@ const PomoTimer: React.FC = () => {
 
   function startTimer() {
     setRunning(true);
-    setPaused(false);
+    setIsPaused(false);
 
     const timer = setInterval(() => {
       setCurrentTime(prevtime => prevtime - 0.01);
@@ -53,14 +53,14 @@ const PomoTimer: React.FC = () => {
   function pauseTimer() {
     clearInterval(interv.current);
     setRunning(false);
-    setPaused(true);
+    setIsPaused(true);
   }
 
   function changeMode(mode: number) {
     setTotalTime(PomodoroModes[mode].time);
     setCurrentTime(PomodoroModes[mode].time);
     setMode(mode);
-    setPaused(false);
+    setIsPaused(false);
     setRunning(false);
     clearInterval(interv.current);
   }
@@ -68,7 +68,7 @@ const PomoTimer: React.FC = () => {
   useEffect(() => {
     if (currentTime < 0) {
       setRunning(false);
-      setPaused(false);
+      setIsPaused(false);
       setCurrentTime(totalTime);
       resetTimer();
     }
